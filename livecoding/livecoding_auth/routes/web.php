@@ -31,9 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 // 
-
 
 Route::get('/todolist', [todolistController::class, 'index'])->name('todolist.index');
 Route::post('/add', [todolistController::class, 'store'])->name('todolist.store');
