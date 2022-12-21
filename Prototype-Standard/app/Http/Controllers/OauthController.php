@@ -17,10 +17,9 @@ public function githubRedirect(){
 }
 
 
-
-
 public function githubCallback() {
     $user = Socialite::driver('github')->stateless()->user();
+    dd($user); 
     $this->registerOrLogin($user); 
     return redirect()->route('dashboard');
 }
